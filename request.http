@@ -1,0 +1,17 @@
+GET http://localhost:8080/redirect/kopwS58f
+Accept: application/json
+
+###  метод типа с авторизацией (добавление)
+POST http://localhost:8080/getUrl?oldUrl=https://rozetka.com.ua/?gclid=CjwKCAjwkYDbBRB6EiwAR0T_-jgnT0kvDU3mfFnI1wQvNeYa04qAJsFIKPHP5_alsWAu687Q0SMRLhoCzJ0QAvD_BwE
+Authorization: Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJhZG1pbiIsImV4cCI6MTIxNjM2MzE5NDg0LCJpYXQiOjE2MzYzMTk0ODQsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTiJ9.Q0-aC9j4oMfuFbDGRo3CyqQH2ksQfgOiqaWt1rJHhN8
+Content-Type: application/json
+######
+
+### получение токена , без него получаем 403 -------- это 1 шаг
+POST http://localhost:8080/authenticate
+Content-Type: application/json
+
+{"name":"admin", "password":"pass"}
+
+###
+
